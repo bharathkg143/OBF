@@ -1,0 +1,284 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\BackOBF\\OrderBookingFormApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{64FDFBA9-CAD7-4364-9CBC-C0D4D89E5D6D}|OrderBookingFormApp.csproj|d:\\backobf\\orderbookingformapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64FDFBA9-CAD7-4364-9CBC-C0D4D89E5D6D}|OrderBookingFormApp.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64FDFBA9-CAD7-4364-9CBC-C0D4D89E5D6D}|OrderBookingFormApp.csproj|d:\\backobf\\orderbookingformapp\\controllers\\orderbookingformcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64FDFBA9-CAD7-4364-9CBC-C0D4D89E5D6D}|OrderBookingFormApp.csproj|solutionrelative:controllers\\orderbookingformcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64FDFBA9-CAD7-4364-9CBC-C0D4D89E5D6D}|OrderBookingFormApp.csproj|d:\\backobf\\orderbookingformapp\\models\\bookingconfirmstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64FDFBA9-CAD7-4364-9CBC-C0D4D89E5D6D}|OrderBookingFormApp.csproj|solutionrelative:models\\bookingconfirmstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64FDFBA9-CAD7-4364-9CBC-C0D4D89E5D6D}|OrderBookingFormApp.csproj|d:\\backobf\\orderbookingformapp\\services\\bookinginfoapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64FDFBA9-CAD7-4364-9CBC-C0D4D89E5D6D}|OrderBookingFormApp.csproj|solutionrelative:services\\bookinginfoapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64FDFBA9-CAD7-4364-9CBC-C0D4D89E5D6D}|OrderBookingFormApp.csproj|d:\\backobf\\orderbookingformapp\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64FDFBA9-CAD7-4364-9CBC-C0D4D89E5D6D}|OrderBookingFormApp.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64FDFBA9-CAD7-4364-9CBC-C0D4D89E5D6D}|OrderBookingFormApp.csproj|d:\\backobf\\orderbookingformapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{64FDFBA9-CAD7-4364-9CBC-C0D4D89E5D6D}|OrderBookingFormApp.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64FDFBA9-CAD7-4364-9CBC-C0D4D89E5D6D}|OrderBookingFormApp.csproj|d:\\backobf\\orderbookingformapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64FDFBA9-CAD7-4364-9CBC-C0D4D89E5D6D}|OrderBookingFormApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64FDFBA9-CAD7-4364-9CBC-C0D4D89E5D6D}|OrderBookingFormApp.csproj|d:\\backobf\\orderbookingformapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{64FDFBA9-CAD7-4364-9CBC-C0D4D89E5D6D}|OrderBookingFormApp.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64FDFBA9-CAD7-4364-9CBC-C0D4D89E5D6D}|OrderBookingFormApp.csproj|d:\\backobf\\orderbookingformapp\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{64FDFBA9-CAD7-4364-9CBC-C0D4D89E5D6D}|OrderBookingFormApp.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64FDFBA9-CAD7-4364-9CBC-C0D4D89E5D6D}|OrderBookingFormApp.csproj|d:\\backobf\\orderbookingformapp\\views\\orderbookingform\\orderbookingform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{64FDFBA9-CAD7-4364-9CBC-C0D4D89E5D6D}|OrderBookingFormApp.csproj|solutionrelative:views\\orderbookingform\\orderbookingform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64FDFBA9-CAD7-4364-9CBC-C0D4D89E5D6D}|OrderBookingFormApp.csproj|d:\\backobf\\orderbookingformapp\\wwwroot\\js\\orderbookingform.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{64FDFBA9-CAD7-4364-9CBC-C0D4D89E5D6D}|OrderBookingFormApp.csproj|solutionrelative:wwwroot\\js\\orderbookingform.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64FDFBA9-CAD7-4364-9CBC-C0D4D89E5D6D}|OrderBookingFormApp.csproj|d:\\backobf\\orderbookingformapp\\views\\shared\\_notificationpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{64FDFBA9-CAD7-4364-9CBC-C0D4D89E5D6D}|OrderBookingFormApp.csproj|solutionrelative:views\\shared\\_notificationpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64FDFBA9-CAD7-4364-9CBC-C0D4D89E5D6D}|OrderBookingFormApp.csproj|d:\\backobf\\orderbookingformapp\\views\\orderbookingform\\confirmbookingsuccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{64FDFBA9-CAD7-4364-9CBC-C0D4D89E5D6D}|OrderBookingFormApp.csproj|solutionrelative:views\\orderbookingform\\confirmbookingsuccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64FDFBA9-CAD7-4364-9CBC-C0D4D89E5D6D}|OrderBookingFormApp.csproj|d:\\backobf\\orderbookingformapp\\views\\home\\enterotp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{64FDFBA9-CAD7-4364-9CBC-C0D4D89E5D6D}|OrderBookingFormApp.csproj|solutionrelative:views\\home\\enterotp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64FDFBA9-CAD7-4364-9CBC-C0D4D89E5D6D}|OrderBookingFormApp.csproj|d:\\backobf\\orderbookingformapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{64FDFBA9-CAD7-4364-9CBC-C0D4D89E5D6D}|OrderBookingFormApp.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64FDFBA9-CAD7-4364-9CBC-C0D4D89E5D6D}|OrderBookingFormApp.csproj|d:\\backobf\\orderbookingformapp\\views\\shared\\_layoutorderbookingform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{64FDFBA9-CAD7-4364-9CBC-C0D4D89E5D6D}|OrderBookingFormApp.csproj|solutionrelative:views\\shared\\_layoutorderbookingform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrderBookingFormController.cs",
+              "DocumentMoniker": "D:\\BackOBF\\OrderBookingFormApp\\Controllers\\OrderBookingFormController.cs",
+              "RelativeDocumentMoniker": "Controllers\\OrderBookingFormController.cs",
+              "ToolTip": "D:\\BackOBF\\OrderBookingFormApp\\Controllers\\OrderBookingFormController.cs",
+              "RelativeToolTip": "Controllers\\OrderBookingFormController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAQwEQAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T05:01:29.916Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\BackOBF\\OrderBookingFormApp\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "D:\\BackOBF\\OrderBookingFormApp\\Controllers\\HomeController.cs*",
+              "RelativeToolTip": "Controllers\\HomeController.cs*",
+              "ViewState": "AgIAAOcBAAAAAAAAAAAAAPEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T05:42:05.646Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "OrderBookingForm.cshtml",
+              "DocumentMoniker": "D:\\BackOBF\\OrderBookingFormApp\\Views\\OrderBookingForm\\OrderBookingForm.cshtml",
+              "RelativeDocumentMoniker": "Views\\OrderBookingForm\\OrderBookingForm.cshtml",
+              "ToolTip": "D:\\BackOBF\\OrderBookingFormApp\\Views\\OrderBookingForm\\OrderBookingForm.cshtml",
+              "RelativeToolTip": "Views\\OrderBookingForm\\OrderBookingForm.cshtml",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAMgBAABuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-12T10:00:09.372Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "OrderBookingForm.js",
+              "DocumentMoniker": "D:\\BackOBF\\OrderBookingFormApp\\wwwroot\\js\\OrderBookingForm.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\OrderBookingForm.js",
+              "ToolTip": "D:\\BackOBF\\OrderBookingFormApp\\wwwroot\\js\\OrderBookingForm.js",
+              "RelativeToolTip": "wwwroot\\js\\OrderBookingForm.js",
+              "ViewState": "AgIAACIAAAAAAAAAAAAIwHMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-11-20T08:13:47.35Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\BackOBF\\OrderBookingFormApp\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\BackOBF\\OrderBookingFormApp\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-20T08:45:48.856Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\BackOBF\\OrderBookingFormApp\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\BackOBF\\OrderBookingFormApp\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T04:47:43.061Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\BackOBF\\OrderBookingFormApp\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\BackOBF\\OrderBookingFormApp\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAE0AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-20T11:08:35.716Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BookingConfirmStatus.cs",
+              "DocumentMoniker": "D:\\BackOBF\\OrderBookingFormApp\\Models\\BookingConfirmStatus.cs",
+              "RelativeDocumentMoniker": "Models\\BookingConfirmStatus.cs",
+              "ToolTip": "D:\\BackOBF\\OrderBookingFormApp\\Models\\BookingConfirmStatus.cs",
+              "RelativeToolTip": "Models\\BookingConfirmStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T06:49:23.876Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\BackOBF\\OrderBookingFormApp\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\BackOBF\\OrderBookingFormApp\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T06:55:32.004Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BookingInfoAPIService.cs",
+              "DocumentMoniker": "D:\\BackOBF\\OrderBookingFormApp\\Services\\BookingInfoAPIService.cs",
+              "RelativeDocumentMoniker": "Services\\BookingInfoAPIService.cs",
+              "ToolTip": "D:\\BackOBF\\OrderBookingFormApp\\Services\\BookingInfoAPIService.cs",
+              "RelativeToolTip": "Services\\BookingInfoAPIService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T05:14:21.52Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "site.css",
+              "DocumentMoniker": "D:\\BackOBF\\OrderBookingFormApp\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "D:\\BackOBF\\OrderBookingFormApp\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAAAIwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-20T11:21:26.403Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "_NotificationPartial.cshtml",
+              "DocumentMoniker": "D:\\BackOBF\\OrderBookingFormApp\\Views\\Shared\\_NotificationPartial.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_NotificationPartial.cshtml",
+              "ToolTip": "D:\\BackOBF\\OrderBookingFormApp\\Views\\Shared\\_NotificationPartial.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_NotificationPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-26T11:10:02.484Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ConfirmBookingSuccess.cshtml",
+              "DocumentMoniker": "D:\\BackOBF\\OrderBookingFormApp\\Views\\OrderBookingForm\\ConfirmBookingSuccess.cshtml",
+              "RelativeDocumentMoniker": "Views\\OrderBookingForm\\ConfirmBookingSuccess.cshtml",
+              "ToolTip": "D:\\BackOBF\\OrderBookingFormApp\\Views\\OrderBookingForm\\ConfirmBookingSuccess.cshtml",
+              "RelativeToolTip": "Views\\OrderBookingForm\\ConfirmBookingSuccess.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-03T11:18:31.472Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "EnterOTP.cshtml",
+              "DocumentMoniker": "D:\\BackOBF\\OrderBookingFormApp\\Views\\Home\\EnterOTP.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\EnterOTP.cshtml",
+              "ToolTip": "D:\\BackOBF\\OrderBookingFormApp\\Views\\Home\\EnterOTP.cshtml",
+              "RelativeToolTip": "Views\\Home\\EnterOTP.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-20T11:26:24.27Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\BackOBF\\OrderBookingFormApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\BackOBF\\OrderBookingFormApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-23T04:55:53.218Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "_LayoutOrderBookingForm.cshtml",
+              "DocumentMoniker": "D:\\BackOBF\\OrderBookingFormApp\\Views\\Shared\\_LayoutOrderBookingForm.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_LayoutOrderBookingForm.cshtml",
+              "ToolTip": "D:\\BackOBF\\OrderBookingFormApp\\Views\\Shared\\_LayoutOrderBookingForm.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_LayoutOrderBookingForm.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAACGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-23T04:59:18.521Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

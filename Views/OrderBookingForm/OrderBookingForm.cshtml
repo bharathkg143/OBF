@@ -1,0 +1,606 @@
+﻿@model SalesBookedData
+@{
+    Layout = "_LayoutOrderBookingForm";
+    ViewData["Title"] = "OBF";
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
+
+<style>
+    .form-container {
+        margin: 10px;
+        width: 100%;
+    }
+
+    .form-row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+    }
+
+    .form-label {
+        margin-right: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        flex-basis: 140px;
+        flex-shrink: 0;
+    }
+
+    .form-control {
+        flex: 1;
+        height: 38px;
+        outline: none;
+        box-sizing: border-box;
+        margin-right: 20px;
+    }
+
+        .form-control:focus {
+            box-shadow: none;
+        }
+
+    .heading-container {
+        margin: 10px;
+        background-color: #e0e0e0;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+    }
+
+        .heading-container h4 {
+            color: black;
+            padding: 5px;
+            margin: 0;
+        }
+
+    .signature-pad {
+        width: 100%;
+        max-width: 100%;
+        border: 1px solid #add8e6;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+        .signature-pad canvas {
+            width: 100%;
+            height: auto;
+            box-sizing: border-box;
+        }
+
+    .btnEraseRetake {
+        background: linear-gradient(to right, #18478B, #283A61);
+        color:white;
+        width: 35%;
+        max-width: 200px;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 50px;
+        cursor: pointer;
+        box-sizing: border-box;
+        text-align: center;
+        border:none;
+        outline:none;
+        box-shadow: 3px 3px 3px #cecece, -3px -3px 3px #fff;
+        padding:3px;
+        opacity:100%;
+    }
+
+    .capture-container {
+        width: 100%;
+        max-width: 100%;
+        height: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid grey;
+        margin-top: 0px;
+        box-sizing: border-box;
+        border: 1px solid #add8e6;
+    }
+
+    .camera-icon {
+        font-size: 150px;
+    }
+
+    #btnSubmit {
+        width: 50%;
+        background-color:#264A9F;
+        box-shadow: 3px 3px 3px #cecece, -3px -3px 3px #fff;
+        border: none;
+        outline:none;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        margin-bottom: 25px;
+        border-radius: 50px;
+    }
+
+    .scrollable-input {
+        white-space: nowrap;
+        overflow-x: auto;
+        text-overflow: ellipsis;
+        cursor: text;
+    }
+
+    .adhar-camera-icon {
+        font-size: 70px;
+    }
+
+    .adhar-capture-container {
+        width: 100%;
+        max-width: 100%;
+        height: 180px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        border: 1px solid #add8e6;
+        background-color: #EDEDED;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .pancard-camera-icon {
+        font-size: 130px;
+    }
+
+    .pancard-capture-container {
+        width: 100%;
+        max-width: 100%;
+        height: 220px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        border: 1px solid #add8e6;
+        background-color: #EDEDED;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .common-image-capture-container{
+        background: linear-gradient(to left, #EFF0F3, #E5E6EB);
+        border-radius: 10px;
+        outline:none;
+        /* box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.3), inset -3px -3px 6px rgba(255, 255, 255, 0.1), inset -3px 3px 6px rgba(0, 0, 0, 0.3), inset 3px -3px 6px rgba(255, 255, 255, 0.1) !important;
+        opacity:100%;
+        border:none; */
+    }
+
+    #txtUserEnteredNamed{
+        opacity: 100%;
+        outline:none;
+        padding: 20px;
+        color: #264A9F;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+</style>
+
+<div class="text-center mt-3">
+    <h1 style="opacity:100%;"><b>ORDER BOOKING FORM</b></h1>
+</div>
+
+<div class="mt-3" style="margin-left:10px;opacity:100%;">
+    <span style="font-size: 17px;">
+        Dear Customer, Thank you for booking your next vehicle with POPULAR VEHICLES.<br />
+        Please check the below details and CONFIRM your booking.
+    </span>
+</div>
+
+<!-- Customer Info Start -->
+<div id="divCustomerDetails" style="opacity:100%;">
+    <div class="mt-3 heading-container shadow-sm">
+        <h4 class="mt-1">CUSTOMER DETAILS</h4>
+    </div>
+
+    <div class="form-container mt-3">
+        <div class="form-row">
+            <label class="form-label">CUSTOMER NAME</label>
+            <input type="text" id="txtCustomerName" class="form-control shadow-sm" value="@Model.CustomerName" readonly>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label">MOBILE NO.</label>
+            <input type="text" id="txtMobileNo" class="form-control shadow-sm" value="@Model.MobileNo" readonly>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label">OTHER CONTACT NO</label>
+            <input type="text" id="txtOtherContactNo" class="form-control shadow-sm" value="@Model.OtherContactNo" readonly>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label">E-MAIL</label>
+            <input type="text" id="txtEmail" class="form-control shadow-sm scrollable-input" value="@Model.Email" readonly>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label">PAN NO.</label>
+            <input type="text" id="txtPanNo" class="form-control shadow-sm" value="@Model.PanCardNo" readonly>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label">DOB</label>
+            <input type="text" id="txtDob" class="form-control shadow-sm" value="@Model.DOB" readonly>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label">FATHER/<br />HUSBAND NAME</label>
+            <input type="text" id="txtFatherHusbandName" class="form-control shadow-sm" value="@Model.FatherOrHusbandName" readonly>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label">ADDRESS</label>
+            <input type="text" id="txtAddress" class="form-control shadow-sm" value="@Model.Address" readonly>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label">PIN CODE</label>
+            <input type="text" id="txtPinCode" class="form-control shadow-sm" value="@Model.PinCode" readonly>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label">VILLAGE</label>
+            <input type="text" id="txtVillage" class="form-control shadow-sm" value="@Model.Village" readonly>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label">CITY</label>
+            <input type="text" id="txtCity" class="form-control shadow-sm" value="@Model.City" readonly>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label">TEHSIL</label>
+            <input type="text" id="txtTehsil" class="form-control shadow-sm" value="@Model.Taluk" readonly>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label">DISTRICT</label>
+            <input type="text" id="txtDistrict" class="form-control shadow-sm" value="@Model.District" readonly>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label">STATE</label>
+            <input type="text" id="txtState" class="form-control shadow-sm" value="@Model.State" readonly>
+        </div>
+    </div>
+</div>
+<!-- Customer Info End -->
+
+<!-- Booked Vehicle Info Start -->
+<div id="divBookedVehicleDetails" style="opacity:100%;">
+    <div class="mt-3 heading-container shadow-sm">
+        <h4 class="mt-1">BOOKED VEHICLE DETAILS</h4>
+    </div>
+
+    <div class="form-container mt-3">
+        <div class="form-row">
+            <label class="form-label">DMS OBF NO.</label>
+            <input type="text" id="txtDmsObfNo" class="form-control shadow-sm" value="@Model.DmsObfNo" readonly>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label">BOOKING DATE</label>
+            <input type="text" id="txtBookingDate" class="form-control shadow-sm" value="@Model.BookingDate" readonly>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label">BOOKED MODEL</label>
+            <input type="text" id="txtBookedModel" class="form-control shadow-sm" value="@Model.Model" readonly>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label">BOOKED VARIANT</label>
+            <input type="text" id="txtBookedVariant" class="form-control shadow-sm" value="@Model.Variant" readonly>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label">COLOR</label>
+            <input type="text" id="txtColor" class="form-control shadow-sm" value="@Model.Color" readonly>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label">TENTATIVE WAITING PERIOD</label>
+            <input type="text" id="txtTentativeWaitingPeriod" class="form-control shadow-sm" value="@Model.TentativeWaitPeriod" readonly>
+        </div>
+
+    </div>
+</div>
+<!-- Booked Vehicle Info End -->
+
+<!-- Cost of Vehicle Info Start -->
+<div id="divCostVehicleDetails" style="opacity:100%;">
+    <div class="mt-3 heading-container shadow-sm">
+        <h4 class="mt-1">COST OF VEHICLE</h4>
+    </div>
+
+    <div class="form-container mt-3">
+        <div class="form-row">
+            <label class="form-label">EX- SHOWROOM PRICE</label>
+            <input type="text" id="txtExShowroomPrice" class="form-control shadow-sm" value="@Model.ExShowroomPrice" readonly>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label">REGISTRATION CHARGES</label>
+            <input type="text" id="txtRegistrationCharges" class="form-control shadow-sm" value="@Model.RegistrationCharges" readonly>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label">TEMP. REG CHARGES</label>
+            <input type="text" id="txtTempRegCharges" class="form-control shadow-sm" value="@Model.TempRegCharges" readonly>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label">INSURANCE PRICE</label>
+            <input type="text" id="txtInsurancePrice" class="form-control shadow-sm" value="@Model.InsurancePrice" readonly>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label">EW (OPTIONAL)</label>
+            <input type="text" id="txtEw" class="form-control shadow-sm" value="@Model.EwOptional" readonly>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label">ACCESSORIES</label>
+            <input type="text" id="txtAccessories" class="form-control shadow-sm" value="@Model.Accessories" readonly>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label">OTHERS (IF ANY)</label>
+            <input type="text" id="txtOtherIfAny" class="form-control shadow-sm" value="@Model.OthersIfAny" readonly>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label">OTHERS DESCRIBE</label>
+            <input type="text" id="txtOthersDescribe" class="form-control shadow-sm" value="@Model.OthersDescribe" readonly>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label">DISCOUNT</label>
+            <input type="text" id="txtDiscount" class="form-control shadow-sm" value="@Model.Discount" readonly>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label">CGST @@ 14%</label>
+            <input type="text" id="txtCgst" class="form-control shadow-sm" value="@Model.CGST14Percent" readonly>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label">SGST @@ 14% E</label>
+            <input type="text" id="txtSgst" class="form-control shadow-sm" value="@Model.SGST14Percent" readonly>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label">CESS @@ 1%</label>
+            <input type="text" id="txtCess" class="form-control shadow-sm" value="@Model.CESS1Percent" readonly>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label">ON ROAD PRICE</label>
+            <input type="text" id="txtOnRoadPrice" class="form-control shadow-sm" value="@Model.OnRoadPrice" readonly>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label">BOOKING AMOUNT</label>
+            <input type="text" id="txtBookingAmount" class="form-control shadow-sm" value="@Model.Amount" readonly>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label">PAYMENT MODE</label>
+            <input type="text" id="txtPaymentMode" class="form-control shadow-sm" value="@Model.PaymentMode" readonly>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label">PAYMENT REFERENCE</label>
+            <input type="text" id="txtPaymentReference" class="form-control shadow-sm" value="@Model.PaymentReference" readonly>
+        </div>
+    </div>
+</div>
+<!-- Cost of Vehicle Info End -->
+
+<!-- Other Info Start -->
+<div id="divOtherDetails" style="opacity:100%;">
+    <div class="mt-3 heading-container shadow-sm">
+        <h4 class="mt-1">OTHER DETAILS</h4>
+    </div>
+
+    <div class="form-container mt-3">
+        <div class="form-row">
+            <label class="form-label">EXCHANGE</label>
+            <input type="text" id="txtExchange" class="form-control shadow-sm" value="@Model.Exchangestatus" readonly>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label">EXISTING CAR MODEL</label>
+            <input type="text" id="txtExistingCarModel" class="form-control shadow-sm" value="@Model.ExistingCarModel" readonly>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label">REGISTRATION NUMBER</label>
+            <input type="text" id="txtRegistrationNo" class="form-control shadow-sm" value="@Model.RegistrationNo" readonly>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label">MSIL LISTED CORPORATE</label>
+            <input type="text" id="txtMsilListedCorporate" class="form-control shadow-sm" value="@Model.MSILListedCorporate" readonly>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label">CORPORATE NAME</label>
+            <input type="text" id="txtCorporateName" class="form-control shadow-sm" value="@Model.CorporateName" readonly>
+        </div>
+
+        <div class="form-row">
+            <label class="form-label">FINANCE AVAILED</label>
+            <input type="text" id="txtFinanceAvailed" class="form-control shadow-sm" value="@Model.Finance" readonly>
+        </div>
+    </div>
+</div>
+<!-- Other Info End -->
+
+<!-- Terms and Condition Start -->
+<div class="mt-5" style="margin-left:10px;opacity:100%;">
+    <span style="font-size: 17px;">
+        We hereby give our unconditional consent to be contacted by Maruti Suzuki and /its business associates in relation to the products and services of Maruti Suzuki India Limited by means including but not limited to my telephone /Mobile Phone/E-mail/SMS.<br />
+        I hereby give my unconditional consent to MSIL to use itself or disclose the data collected by MSIL with its Parent Company and/ or business associates for the purpose of carrying out the essential business functions like business and market development, building and managing external relationships, ensuring data protecion and seamless provision of services, research and development, technology infrastructure and such other purpose as required by law or regulation. I/We acknowledge that Welcome docket has been provided to me. All Pay Order /Demand Draft should be in favor of [Dealership name] payable at [City Name)
+
+    </span>
+</div>
+<!-- Terms and Condition End -->
+
+<!-- Enter user name Start -->
+<div class="mt-5" style="margin-left:10px;margin-right: 10px;opacity:100%;">
+    <label class="form-label">PLEASE TYPE YOUR NAME<i class="lblStar" style="color: red;">*</i></label>
+    <input type="text" id="txtUserEnteredNamed" class="form-control shadow-sm" style="background-color:#F5F5F5;">
+</div>
+<!-- Enter user name End -->
+
+<!-- Signature Capture Start -->
+<div class="mt-4" style="margin-left:10px;margin-right: 10px;opacity:100%;">
+    <label class="form-label">PLEASE SIGN IN BELOW BOX<i class="lblStar" style="color: red;">*</i></label>
+    <div id="signature-pad" class="signature-pad" style="background-color:#F5F5F5">
+        <canvas id="canvas" width="500" height="400"></canvas>
+    </div>
+    <button id="btnErase" class="btnEraseRetake btn-custom mt-1">ERASE</button>
+</div>
+<!-- Signature Capture End -->
+
+<!-- Photo Capture Start -->
+<div class="mt-5" style="margin-left:10px;margin-right:10px;opacity:100%;">
+    <label class="form-label">PLEASE OPEN THE CAMERA TAKE YOUR PICTURE (FACE MANDATORY)<i class="lblStar" style="color: red;">*</i></label>
+    <div>
+        <input type="file" accept="image/*" capture="camera" id="capture-button" style="display: none;">
+    </div>
+    <div id="divCaptureImage" class="capture-container shadow-sm common-image-capture-container">
+        <label for="capture-button">
+            <a><i class="bi bi-camera-fill camera-icon"></i></a>
+        </label>
+    </div>
+    <button id="btnRetake" class="btnEraseRetake btn-custom mt-2">RETAKE</button>
+</div>
+<!-- Photo Capture End -->
+
+<!-- Aadhaar Image Capture Start -->
+<div class="mt-5" style="margin-left: 10px; margin-right: 10px;opacity:100%;">
+    <label class="form-label">
+        PLEASE CLICK A PICTURE OF YOUR AADHAR ID
+        <i class="lblStar" style="color: red;">*</i>
+    </label>
+    <div class="row">
+        <!-- Aadhaar Front Capture -->
+        <div class="col-6">
+            <div>
+                <input type="file" accept="image/*" id="adhar-front-capture-btn" style="display: none;">
+            </div>
+            <div id="adhar-front-capture-image" class="adhar-capture-container common-image-capture-container shadow-sm">
+                <label for="adhar-front-capture-btn">
+                    <i class="bi bi-camera-fill adhar-camera-icon"></i>
+                    <p class="mt-0"><b>FRONT IMAGE</b></p>
+                </label>
+            </div>
+            <!-- Aadhaar Front Retake Button -->
+            <button id="adhar-front-retake-btn" class="btnEraseRetake btn-custom mt-2" style="width:80px">RETAKE</button>
+        </div>
+
+        <!-- Aadhaar Back Capture -->
+        <div class="col-6">
+            <div>
+                <input type="file" accept="image/*" id="adhar-back-capture-btn" style="display: none;">
+            </div>
+            <div id="adhar-back-capture-image" class="adhar-capture-container common-image-capture-container shadow-sm">
+                <label for="adhar-back-capture-btn">
+                    <i class="bi bi-camera-fill adhar-camera-icon"></i>
+                    <p class="mt-0"><b>BACK IMAGE</b></p>
+                </label>
+            </div>
+            <!-- Aadhaar Back Retake Button -->
+            <button id="adhar-back-retake-btn" class="btnEraseRetake btn-custom mt-2" style="width:80px">RETAKE</button>
+        </div>
+    </div>
+
+    @* <div class="row mt-2 text-center">
+        <div class="col-12">
+            <label class="form-label">OR</label>
+            <div class="mt-0">
+                <span>
+                    <i class=" bi bi-link-45deg" style="font-size:25px;"><i class="lblStar" style="color: red;">*</i></i>
+                    <button class="btnEraseRetake text-center btn-custom" style="width:400px; background-color:#EDEDED; color:black;border: 1px solid #add8e6;outline:none;box-shadow: none;" onclick="triggerAadhaarUpload()"> Click to upload document</button>
+
+                    <input type="file" accept=".pdf,.jpg,.jpeg,.png" capture="" id="aadhar-doc-upload" style="display: none;" />
+                </span>
+            </div>
+            <div id="aadhar-doc-preview" class="mt-1"></div>
+        </div>
+    </div> *@
+</div>
+<!-- Aadhaar Image Capture End -->
+
+<!-- Pan Card Image Capture Start -->
+<div class="mt-5" style="margin-left:10px;margin-right:10px;opacity:100%;">
+    <label class="form-label">PLEASE CLICK A PICTURE OF YOUR PAN CARD<i class="lblStar" style="color: red;">*</i></label>
+    <div class="row">
+        <div class="col-12">
+            <div>
+                <input type="file" accept="image/*" id="pancard-capture-btn" style="display: none;">
+            </div>
+            <div id="pancard-capture-image" class="pancard-capture-container common-image-capture-container shadow-sm">
+                <label for="pancard-capture-btn">
+                    <a style="margin-bottom: 0;"><i class="bi bi-camera-fill pancard-camera-icon"></i></a>
+                    <p class="mt-0" style="margin: 0; font-weight: bold;">FRONT IMAGE</p>
+                </label>
+            </div>
+            <button id="pancard-retake-btn" class=" btnEraseRetake btn-custom mt-2">RETAKE</button>
+        </div>
+    </div>
+
+    @* <div class="row mt-2 text-center">
+        <div class="col-12">
+            <label class="form-label">OR</label>
+            <div class="mt-0">
+                <span>
+                    <i class=" bi bi-link-45deg" style="font-size:25px;"><i class="lblStar" style="color: red;">*</i></i>
+                    <button class="btnEraseRetake text-center btn-custom" style="width:400px; background-color:#EDEDED; color:black;border: 1px solid #add8e6;outline:none;box-shadow: none;" onclick="triggerPancardUpload()">
+                        Click to upload document
+                    </button>
+                    <input type="file" accept=".pdf,.jpg,.jpeg,.png" capture="" id="pancard-doc-upload" style="display: none;" />
+                </span>
+            </div>
+            <div id="pancard-doc-preview" class="mt-1"></div>
+        </div>
+    </div> *@
+</div>
+<!-- Pan Card Image Capture End -->
+
+<div class="mt-5 text-center" style="margin-left:10px;margin-right:10px;">
+    <button id="btnSubmit" class="btn btn-custom" style=""><b>SUBMIT</b></button>
+</div>
+
+
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
+    <script src="~/js/OrderBookingForm.js" asp-append-version="true"></script>
+
+    <script type="text/javascript">
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var errorGettingUserData = '@ViewBag.ErrorGettingData';
+
+            if (errorGettingUserData != null && errorGettingUserData != "") {
+                toastr.options.positionClass = 'toast-bottom-right';
+                toastr.options.toastClass = "global-custom-toast",
+                toastr.options.timeOut = 10000;
+                toastr.warning("Error occured while fetching user Booking data.. Please try again");
+            }
+        });
+
+        // Storing URL's required in external OrderBookingForm.js file for sending request to server (bcz razor syntax or code will not work in external js only in .cshtml file)
+        var submitOBFUrl = '@Url.Action("SubmitOrderBookingForm", "OrderBookingForm")';
+        var confirmOBFSubmissionUrl = '@Url.Action("ConfirmBookingSuccess", "OrderBookingForm")';
+
+    </script>
+}

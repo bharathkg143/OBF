@@ -1,0 +1,118 @@
+﻿
+@{
+    ViewData["Title"] = "OBF";
+}
+
+<style>
+    #btnSubmit {
+        background: linear-gradient(to left, #8B4513, #D2691E);
+        color: white;
+        width: 300px;
+        opacity:100%;
+        border-radius: 50px;
+        outline:none;
+        border:none;
+        box-shadow: 3px 3px 3px #cecece, -3px -3px 3px #fff;
+    }
+
+    #btnBack{
+        background: linear-gradient(to right, #18478B, #283A61);
+        color: white;
+        width: 300px;
+        opacity:100%;
+        border-radius:50px;
+        border:none;
+        outline: none;
+        box-shadow: 3px 3px 3px #cecece, -3px -3px 3px #fff;
+    }
+
+    #inpOtp{
+        width: 250px;
+        border: none;
+        border-radius: 50px;
+        opacity: 100%;
+        height: 35px;
+        outline:none;
+        box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        color: #264A9F;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+    @@media (min-width: 768px) {
+        /* For medium devices like tablets */
+        .button-container {
+            justify-content: space-evenly;
+        }
+    }
+
+    @@media (min-width: 1024px) {
+        /* For large screens like iPads tablets */
+        .button-container {
+            gap: 10px;
+            justify-content: center;
+        }
+
+        #btnSubmit, #btnBack {
+            width: 250px; /* Reduce width on larger screens */
+        }
+    }
+
+</style>
+
+<div class="container mt-5">
+    <div class="row text-center">
+        <h4 style="opacity:100%;">
+            <b>Enter One Time Password for @TempData["MaskedPhoneNumber"]</b>
+        </h4>
+    </div>
+
+    <div class="row justify-content-center mt-4">
+        <input type="number" id="inpOtp" name="input1" class="form-control" placeholder="Enter OTP" />
+    </div>
+
+    <div class="row justify-content-center mt-4">
+        <div class="col-8 col-md-6 col-lg-4 button-container">
+            <a id="btnBack" asp-action="Index" asp-controller="Home" class="btn btn-custom m-2"><b>Back</b></a>
+            <button id="btnSubmit" class="btn btn-custom m-2"><b>Submit</b></button>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $('#btnSubmit').click(function () {
+            var enteredOtp = $('#inpOtp').val();
+            if (enteredOtp == "" || enteredOtp == null) {
+                toastr.options.positionClass = 'toast-bottom-right';
+                toastr.options.toastClass = "global-custom-toast",
+                toastr.warning('Please enter the otp send to your registered mobile number..!');
+            }
+            else {
+                $.ajax({
+                    type:'POST',
+                    url: '@Url.Action("ValidateOTP", "Home")',
+                    data: { otp : enteredOtp},
+                    dataType:'json',
+                    success:function(response){
+                        if (response.success == true) {
+                            window.location.href = "@Url.Action("OrderBookingForm", "OrderBookingForm")";
+                        }
+                        else {
+                            toastr.options.positionClass = 'toast-bottom-right';
+                            toastr.options.toastClass = "global-custom-toast",
+                            toastr.error(response.message);
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+}
